@@ -1,9 +1,10 @@
 import './App.css';
+import MainUI from './component/MainUI';
 
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <MainUI />
     </div>
   );
 }
