@@ -61,6 +61,7 @@ class MainUI extends Component {
     render() {
         return (
             <div className="main-class">
+                <h1>Weather Report</h1>
                 <UserInput
                     data={this.state}
                     handleSubmit={this.handleSubmit}
