@@ -1,0 +1,10 @@
+First get the file back from one commit before:
+
+$> git checkout HEAD~1 path/to/file.ext
+Then commit it:
+
+$> git commit -a -m 'Retrieved file from older revision'
+If only the changes to that file where present in the last commit, you can even use git-revert:
+
+$> git revert HEAD
+I think it would be better to make this a separate commit, because it tells you exactly what you've reverted, and why. However, you can squash this into the previous commit by using the --amend switch to git-commit.
