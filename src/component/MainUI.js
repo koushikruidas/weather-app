@@ -26,9 +26,15 @@ class MainUI extends Component {
             .then(response => response.json())
             .then(response => {
                 // console.log(response);
-                let max= (response.main.temp_max - 273.15);
-                let min= (response.main.temp_min -273.15);
-                let curr = (response.main.temp -273.15)
+                let max= (response.main.temp_max - 273);
+                let min= (response.main.temp_min -273);
+                let curr = (response.main.temp -273);
+                max = max.toString();
+                max = max.substring(0,4);
+                min = min.toString();
+                min = min.substring(0,4);
+                curr = curr.toString();
+                curr = curr.substring(0,4);
                 let unix_rise=response.sys.sunrise;
                 let unix_set= response.sys.sunset; // This is getting time in unix seconds since 1970
                 let sunrise = new Date(unix_rise*1000); // converting the seconds in miliseconds
